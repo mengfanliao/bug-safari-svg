@@ -22,15 +22,10 @@
 		.external {
 			filter:url("filters.svg#external")
 		}
-
-		svg {
-			height: 0;
-			width: 0;
-		}
 	</style>
 </head>
 <body>
-	<svg>
+	<svg viewbox="0 0 64 64" width="64" height="64">
 		<filter id="embedded">
 			<feColorMatrix
 					in="SourceGraphic"
@@ -40,6 +35,14 @@
 									0,     0.242, 0.758, 0, 0
 									0,     0,     0,     1, 0"/>
 		</filter>
+    <image
+      xlink:href="redsquare.png"
+      x="0"
+      y="0"
+      width="64"
+      height="64"
+      filter="url(#embedded)"
+      />
 	</svg>
 	<img class="embedded" src="redsquare.png"/>
 	<img class="external" src="redsquare.png"/>
